@@ -1,0 +1,447 @@
+/* =========================================================
+   BLOOD DONOR - LANDING PAGE
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fffaf0;
+    color: #333;
+}
+
+
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+
+.navbar {
+    height: 108px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 60px;
+
+    background: #fffdf7;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.10);
+
+    position: relative;
+    z-index: 10;
+}
+
+
+/* LOGO */
+
+.logo {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    font-size: 40px;
+    font-weight: 700;
+
+    color: #963b08;
+}
+
+.blood-icon {
+    font-size: 42px;
+}
+
+
+/* LOGIN BUTTON */
+
+.login-btn {
+    display: inline-block;
+
+    padding: 16px 38px;
+
+    background: #a50f1b;
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 14px;
+
+    font-size: 20px;
+    font-weight: 700;
+
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.18);
+
+    transition: 0.3s;
+}
+
+.login-btn:hover {
+    background: #850c16;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.20);
+}
+
+
+/* =========================================================
+   HERO SECTION
+   ========================================================= */
+
+.hero {
+    min-height: 460px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 70px 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff0d0,
+            #fff9df
+        );
+}
+
+
+.hero-content {
+    max-width: 1150px;
+}
+
+
+/* HERO TITLE */
+
+.hero h1 {
+    font-size: 64px;
+
+    line-height: 1.15;
+
+    color: #963b08;
+
+    font-weight: 700;
+
+    margin-bottom: 35px;
+}
+
+
+/* HERO DESCRIPTION */
+
+.hero p {
+    max-width: 950px;
+
+    margin: 0 auto 35px;
+
+    font-size: 25px;
+
+    line-height: 1.55;
+
+    color: #34495e;
+}
+
+
+/* START BUTTON */
+
+.start-btn {
+    display: inline-block;
+
+    padding: 19px 55px;
+
+    background: #efb46e;
+
+    color: #4b280d;
+
+    text-decoration: none;
+
+    border-radius: 40px;
+
+    font-size: 22px;
+
+    font-weight: 700;
+
+    box-shadow: 0 7px 15px rgba(0, 0, 0, 0.15);
+
+    transition: 0.3s;
+}
+
+.start-btn:hover {
+    background: #e6a65a;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   WELCOME SECTION
+   ========================================================= */
+
+.welcome {
+    padding: 70px 60px 90px;
+
+    background: #fffdf7;
+
+    text-align: center;
+}
+
+
+/* TITLE */
+
+.welcome h2 {
+    font-size: 46px;
+
+    color: #963b08;
+
+    margin-bottom: 12px;
+}
+
+
+.welcome-text {
+    font-size: 22px;
+
+    color: #34495e;
+
+    margin-bottom: 50px;
+}
+
+
+/* =========================================================
+   FEATURE GRID
+   ========================================================= */
+
+.feature-grid {
+
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 32px;
+}
+
+
+/* =========================================================
+   FEATURE CARD
+   ========================================================= */
+
+.feature-card {
+
+    min-height: 255px;
+
+    padding: 35px 25px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    color: inherit;
+
+    background: #ffffff;
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.10);
+
+    transition:
+        transform 0.3s,
+        box-shadow 0.3s;
+
+    border: 1px solid #f0eeee;
+}
+
+
+.feature-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 15px 30px rgba(0, 0, 0, 0.16);
+}
+
+
+/* ICON */
+
+.feature-icon {
+
+    font-size: 58px;
+
+    margin-bottom: 18px;
+}
+
+
+/* CARD TITLE */
+
+.feature-card h3 {
+
+    font-size: 27px;
+
+    color: #963b08;
+
+    margin-bottom: 12px;
+}
+
+
+/* CARD DESCRIPTION */
+
+.feature-card p {
+
+    font-size: 18px;
+
+    line-height: 1.5;
+
+    color: #52616b;
+
+    max-width: 330px;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+
+    padding: 25px;
+
+    text-align: center;
+
+    background: #fff1dc;
+
+    color: #684326;
+
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .navbar {
+        padding: 0 30px;
+    }
+
+    .logo {
+        font-size: 32px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero p {
+        font-size: 21px;
+    }
+
+    .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+    .navbar {
+
+        height: 85px;
+
+        padding: 0 18px;
+    }
+
+    .logo {
+        font-size: 25px;
+    }
+
+    .blood-icon {
+        font-size: 30px;
+    }
+
+    .login-btn {
+
+        padding: 11px 20px;
+
+        font-size: 16px;
+    }
+
+    .hero {
+
+        min-height: 400px;
+
+        padding: 55px 20px;
+    }
+
+    .hero h1 {
+
+        font-size: 38px;
+
+        margin-bottom: 25px;
+    }
+
+    .hero p {
+
+        font-size: 18px;
+    }
+
+    .start-btn {
+
+        padding: 15px 35px;
+
+        font-size: 18px;
+    }
+
+    .welcome {
+
+        padding: 50px 20px 70px;
+    }
+
+    .welcome h2 {
+
+        font-size: 34px;
+    }
+
+    .welcome-text {
+
+        font-size: 18px;
+    }
+
+    .feature-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 22px;
+    }
+
+    .feature-card {
+
+        min-height: 220px;
+    }
+
+}

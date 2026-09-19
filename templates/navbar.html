@@ -1,0 +1,52 @@
+<!-- =====================================================
+     COMMON NAVIGATION BAR
+     ===================================================== -->
+
+<nav class="main-navbar">
+
+    <div class="navbar-container">
+
+        <!-- Logo -->
+        <a href="{{ url_for('home') }}" class="navbar-logo">
+            🩸 BLOOD DONOR
+        </a>
+
+        <!-- Menu -->
+        <div class="navbar-menu">
+
+            <a href="{{ url_for('profile') }}"
+               class="nav-link">
+                👤 Profile
+            </a>
+
+            <a href="{{ url_for('register') }}"
+               class="nav-link">
+                🩸 Donor Registration
+            </a>
+
+            <a href="{{ url_for('search') }}"
+               class="nav-link">
+                🔍 Search Donors
+            </a>
+
+            <a href="{{ url_for('matching') }}"
+               class="nav-link">
+                🎯 Matching Donors
+            </a>
+
+            <a href="{{ url_for('donors') }}"
+               class="nav-link">
+                👥 All Donors
+            </a>
+
+            <a href="{{ url_for('logout') }}"
+               class="nav-link logout-link">
+                🚪 Logout
+                <a href="{{ url_for('index') }}">Go to Home</a>
+            </a>
+
+        </div>
+
+    </div>
+
+</nav>

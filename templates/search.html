@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Search Donors - Blood Donor</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/search.css') }}">
+
+</head>
+
+<body>
+
+    <div class="page-container">
+
+        <div class="form-card search-card">
+
+            <div class="step">
+                Step 3 of 3
+            </div>
+
+            <div class="blood-icon">
+                🩸
+            </div>
+
+            <h1>Find a Blood Donor</h1>
+
+            <p class="subtitle">
+                Select the blood group you need
+            </p>
+
+            {% if error %}
+                <div class="error-message">
+                    {{ error }}
+                </div>
+            {% endif %}
+
+            <form method="POST">
+
+                <div class="form-group">
+
+                    <label>
+                        Required Blood Group
+                    </label>
+
+                    <select
+                        name="blood_group"
+                        required>
+
+                        <option value="">
+                            Select Blood Group
+                        </option>
+
+                        <option value="A+">A+</option>
+                        <option value="A-">A-</option>
+                        <option value="B+">B+</option>
+                        <option value="B-">B-</option>
+                        <option value="AB+">AB+</option>
+                        <option value="AB-">AB-</option>
+                        <option value="O+">O+</option>
+                        <option value="O-">O-</option>
+
+                    </select>
+
+                </div>
+
+                <button
+                    type="submit"
+                    class="main-button">
+
+                    🔍 Search Donors
+
+                </button>
+
+            </form>
+
+            <div class="bottom-links">
+
+                <a href="{{ url_for('logout') }}">
+                    Logout
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+{% include 'navbar.html' %}
+</html>

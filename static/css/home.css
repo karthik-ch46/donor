@@ -1,0 +1,180 @@
+/* =====================================================
+    DASHBOARD
+   ===================================================== */
+
+.index-page {
+    background: #fffaf0;
+    min-height: 100vh;
+}
+
+
+/* HERO */
+
+.home-hero {
+    text-align: center;
+
+    padding: 55px 20px;
+
+    background: linear-gradient(
+        135deg,
+        #fff1d6,
+        #f8f5d9
+    );
+}
+
+.home-hero h1 {
+    font-size: 42px;
+
+    color: #8b3d05;
+
+    margin-bottom: 15px;
+}
+
+.home-hero p {
+    font-size: 18px;
+
+    color: #555;
+}
+
+
+/* DASHBOARD */
+
+.dashboard {
+    padding: 50px 25px 70px;
+
+    max-width: 1150px;
+
+    margin: auto;
+}
+
+.dashboard h2 {
+    text-align: center;
+
+    color: #8b3d05;
+
+    font-size: 32px;
+
+    margin-bottom: 40px;
+}
+
+
+/* CARDS */
+
+.dashboard-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+.dashboard-card {
+    background: #fff;
+
+    border-radius: 16px;
+
+    padding: 30px 25px;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    color: #333;
+
+    box-shadow:
+        0 5px 18px
+        rgba(0, 0, 0, 0.10);
+
+    border: 1px solid #eee;
+
+    transition: 0.25s;
+}
+
+
+.dashboard-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 10px 25px
+        rgba(0, 0, 0, 0.15);
+}
+
+
+.card-icon {
+    font-size: 45px;
+
+    margin-bottom: 15px;
+}
+
+
+.dashboard-card h3 {
+    font-size: 21px;
+
+    color: #8b3d05;
+
+    margin-bottom: 10px;
+}
+
+
+.dashboard-card p {
+    font-size: 15px;
+
+    line-height: 1.5;
+
+    color: #666;
+}
+
+
+/* LOGOUT */
+
+.logout-card h3 {
+    color: #9b111e;
+}
+
+
+/* FOOTER */
+
+.home-page footer {
+    text-align: center;
+
+    padding: 25px;
+
+    background: #f1e4ca;
+
+    color: #765f45;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 850px) {
+
+    .dashboard-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .home-hero h1 {
+        font-size: 32px;
+    }
+
+    .dashboard {
+        padding: 35px 15px;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-card {
+        padding: 25px 20px;
+    }
+
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Donors - Blood Donor</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/donor.css') }}">
+
+</head>
+
+<body>
+
+    <div class="page-container">
+
+        <div class="matching-container">
+
+            <h1>Available Blood Donors</h1>
+
+            <p class="subtitle">
+                Registered donors
+            </p>
+
+            {% if donors %}
+
+                <div class="donor-grid">
+
+                    {% for donor in donors %}
+
+                        <div class="donor-card">
+
+                            <div class="donor-top">
+
+                                <div class="donor-avatar">
+                                    {{ donor['name'][0].upper() }}
+                                </div>
+
+                                <div>
+
+                                    <h2>
+                                        {{ donor['name'] }}
+                                    </h2>
+
+                                    <span class="available">
+                                        ● Available
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                            <div class="donor-details">
+
+                                <p>
+                                    <strong>Blood:</strong>
+                                    {{ donor['blood_group'] }}
+                                </p>
+
+                                <p>
+                                    <strong>Age:</strong>
+                                    {{ donor['age'] }}
+                                </p>
+
+                                <p>
+                                    <strong>Gender:</strong>
+                                    {{ donor['gender'] }}
+                                </p>
+
+                                <p>
+                                    <strong>Mobile:</strong>
+                                    {{ donor['mobile'] }}
+                                </p>
+
+                                <p>
+                                    <strong>City:</strong>
+                                    {{ donor['city'] }}
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    {% endfor %}
+
+                </div>
+
+            {% else %}
+
+                <div class="no-results">
+                    <h2>No donors registered yet.</h2>
+                </div>
+
+            {% endif %}
+
+            <div class="action-buttons">
+
+                <a
+                    href="{{ url_for('search') }}"
+                    class="secondary-button">
+
+                    Search Blood
+
+                </a>
+
+                <a
+                    href="{{ url_for('logout') }}"
+                    class="logout-button">
+
+                    Logout
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+{% include 'navbar.html' %}
+</html>

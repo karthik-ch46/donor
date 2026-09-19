@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Profile - Blood Donor</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/profile.css') }}">
+</head>
+
+<body>
+
+    <div class="page-container">
+
+        <div class="form-card">
+
+            <div class="step">
+                Step 1 of 3
+            </div>
+
+            <h1>My Profile</h1>
+
+            <p class="subtitle">
+                Complete your profile to continue
+            </p>
+
+            {% if error %}
+                <div class="error-message">
+                    {{ error }}
+                </div>
+            {% endif %}
+
+            <form method="POST">
+
+                <div class="form-group">
+
+                    <label>Name</label>
+
+                    <input
+                        type="text"
+                        name="name"
+                        placeholder="Enter your full name"
+                        value="{{ profile['name'] if profile else '' }}"
+                        required>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Age</label>
+
+                    <input
+                        type="number"
+                        name="age"
+                        min="18"
+                        max="100"
+                        placeholder="Enter your age"
+                        value="{{ profile['age'] if profile else '' }}"
+                        required>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Gender</label>
+
+                    <select name="gender" required>
+
+                        <option value="">Select Gender</option>
+
+                        <option value="Male"
+                            {% if profile and profile['gender'] == 'Male' %}
+                            selected
+                            {% endif %}>
+                            Male
+                        </option>
+
+                        <option value="Female"
+                            {% if profile and profile['gender'] == 'Female' %}
+                            selected
+                            {% endif %}>
+                            Female
+                        </option>
+
+                        <option value="Other"
+                            {% if profile and profile['gender'] == 'Other' %}
+                            selected
+                            {% endif %}>
+                            Other
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Mobile Number</label>
+
+                    <input
+                        type="tel"
+                        name="mobile"
+                        maxlength="10"
+                        value="{{ profile['mobile'] if profile else session.get('mobile', '') }}"
+                        required>
+
+                </div>
+
+                <button type="submit" class="main-button">
+                    Save Profile & Continue →
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+{% include 'navbar.html' %}
+</html>

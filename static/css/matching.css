@@ -1,0 +1,122 @@
+body {
+    background: #fff7f7;
+}
+
+.matching-container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.matching-header {
+    background: white;
+    padding: 30px;
+    border-radius: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.matching-header h1 {
+    color: #b71c1c;
+}
+
+.blood-group-display {
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    background: #ffebee;
+    color: #c62828;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.donor-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.donor-card {
+    background: white;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.donor-top {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.donor-avatar {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: #ffdddd;
+    color: #b71c1c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.available {
+    color: #2e7d32;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.donor-details p {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.map-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: #d32f2f;
+    color: white;
+    border-radius: 7px;
+    font-weight: bold;
+}
+
+.no-location {
+    display: inline-block;
+    margin-top: 10px;
+    color: #888;
+}
+
+.no-results {
+    background: white;
+    padding: 50px 20px;
+    border-radius: 18px;
+    text-align: center;
+}
+
+.no-results-icon {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 750px) {
+
+    .donor-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .matching-header {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+}

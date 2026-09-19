@@ -1,0 +1,31 @@
+body {
+    background: linear-gradient(
+        135deg,
+        #fff4f4,
+        #ffe3e3
+    );
+}
+
+.search-card {
+    max-width: 550px;
+    text-align: center;
+    margin-top: 8vh;
+}
+
+.search-card .form-group {
+    text-align: left;
+}
+
+.blood-icon {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.bottom-links {
+    margin-top: 25px;
+}
+
+.bottom-links a {
+    color: #c62828;
+    font-weight: bold;
+}
